@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8"/>
+<title>EventEg</title>
+<script>
+var count =0;
+function increasevalue(){
+document.getElementById('h2').innerHTML = count+=1
+}
+</script>
+</head>
+<body>
+<button onclick ="document.getElementById('d').innerHTML = Date()">GetDate</button>
+<h1 id ="d" ></h1> <br/>
+<div onmouseover ="increasevalue()">Keep your mouse below!!
+<h2 id ="h2"></h2>
+</div>
+</body>
+</html>

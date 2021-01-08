@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbSampleModelStoreContainer" CdmEntityContainer="DbSampleEntities">
+    <EntitySetMapping Name="DepartmentTables">
+      <EntityTypeMapping TypeName="DbSampleModel.DepartmentTable">
+        <MappingFragment StoreEntitySet="DepartmentTable">
+          <ScalarProperty Name="Deptid" ColumnName="Deptid" />
+          <ScalarProperty Name="Dname" ColumnName="Dname" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTables">
+      <EntityTypeMapping TypeName="DbSampleModel.EmployeeTable">
+        <MappingFragment StoreEntitySet="EmployeeTable">
+          <ScalarProperty Name="Eid" ColumnName="Eid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Deptid" ColumnName="Deptid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

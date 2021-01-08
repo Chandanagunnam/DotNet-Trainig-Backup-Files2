@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel=" stylesheet" />
+
+    <title></title>
+
+    <style>
+
+        li {
+            padding-left: 10px;
+            margin-right: auto;
+        }
+
+        nav {
+            font-family: Verdana;
+            font-size: small;
+            padding: 10px,10px,5px,10px;
+            background-color: lightgrey;
+            text-decoration-color: coral;
+        }
+
+            nav:hover {
+                background-color: lightcoral;
+                color: lightpink;
+            }
+
+a:hover{
+ background-color: lightgrey;
+}
+
+nav li a{
+float:left;
+padding-left: 16px;
+padding-top: 14px;
+padding-bottom: 14px;
+text-align: center;
+font-size: 10px;
+text-decoration:none;
+}
+
+            nav li {
+                list-style-type: none;
+
+overflow:hidden;
+            }
+        .column {
+            float: left;
+            width: 25%;
+            padding: 3px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+            .column img {
+                height: 400px;
+            }
+
+        h2 {
+            margin: 10px,20px,15px,25px;
+            border: none none none solid;
+            border-color: lightpink;
+            font-family: Verdana;
+            box-shadow: rosybrown;
+            font-size: larger;
+            padding: 5px,10px,10px,40px
+        }
+
+        body {
+            background-color: mistyrose;
+        }
+
+        img:hover {
+            border-color: indianred;
+            border: dashed;
+        }
+    </style>
+
+</head>
+        <body >
+
+        </body >
+        </html >

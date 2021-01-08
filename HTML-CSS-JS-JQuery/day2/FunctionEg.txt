@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset "utf-8"/>
+<head>
+<!----<script>
+function Addition(){
+//console.log("Inside function");//debugging
+var add = 9+7;
+document.writeln(add);
+}
+Addition();
+</script>--->
+</head>
+<body>
+<h1 id = "add"></h1>
+<script>
+function Addition(a,b){
+return (a+b);
+}
+document.getElementById("add").innerHTML = Addition(9,5);
+</script>
+</body>
+</html>

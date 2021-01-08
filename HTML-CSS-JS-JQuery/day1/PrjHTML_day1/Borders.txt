@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .div1 {
+            border-top: dotted;
+            border: double;
+            border-top-color: red;
+            border-right-color: pink;
+            border-bottom-color: blue;
+        }
+
+        .mixborder {
+            /*top   right     bottom left*/
+            border-style: dotted dashed solid double;
+            border-color: aqua indianred darkcyan midnightblue;
+        }
+        .radius{
+            border:10px solid green;
+            border-radius:8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="radius">
+        <p>
+            Nothing is impossible, the word itself says “I’m possible”!
+        </p>
+
+    </div>
+    <div class=" div1">
+        <p>
+            Time and tide waits for none
+        </p>
+
+    </div>
+    <br />
+    <div class="mixborder">
+        <p>
+            Good  Morning All
+
+        </p>
+    </div>
+    <div>
+        <p style="border:dashed">
+            So many books, so little time.
+        </p>
+        <p style="border:dotted">
+            How are you doing
+        </p>
+    </div>
+
+</body>
+</html>

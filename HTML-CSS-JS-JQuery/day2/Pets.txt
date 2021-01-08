@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+<link  href ="Css/AppLayout.css" rel = "stylesheet"/>
+</head>
+<body>
+    <header>
+<h1>Pets</h1>
+</header>
+<nav>
+<ul>
+<li><a href="MyPetShopping.html">Home</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="Pets.html">Pets</a></li>
+<li><a href="Registration Form.html" style="float:right">Signup</a></li>
+<li><a href="#" style="float:right">Login</a></li>
+</ul>
+</nav>
+<center><h1>PetList</h1/center>
+    <table border="1">
+        
+        <tr>
+            <th>S.no</th>
+            <th>PetName</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Parrot</td>
+            <td>1500</td>
+            <td><img src="images/parrot.jpg" alt="ParrotImage" height="50" width="50" /></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Dog</td>
+            <td>5000</td>
+            <td><img src="images/dog.jpg" alt="DogImage" height="50" width="50" /></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Cat</td>
+            <td>2500</td>
+            <td><img src="images/cat.jpg" alt="CatImage" height="50" width="50" /></td>
+        </tr>
+ <tr>
+            <td>4</td>
+            <td>Rabbit</td>
+            <td>2000</td>
+            <td><img src="images/rabbit.jpg" alt="RabbitImage" height="50" width="50" /></td>
+        </tr>
+    </table>
+</body>
+</html>

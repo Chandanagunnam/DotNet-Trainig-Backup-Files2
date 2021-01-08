@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        h1{
+            text-align:center
+        }
+        .div1{
+            text-align:right;
+        }
+        .div2{
+            text-decoration:underline;/*overline,line-through*/
+            text-shadow:3px 3px pink;
+        }
+    </style>
+ 
+</head>
+<body>
+    <h1>Weather Report</h1>
+    <div class="div1">
+        <p>
+            WaterLogging in GHMC due to heavy rains.
+        </p>
+    </div>
+    <div class="div2">
+        <p>
+            Crops flooded with water in Andhra.
+        </p>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+create table Doctor(Docid int primary key,DocName nvarchar(20),
+DocSpecialization nvarchar(20) constraint chkspcl check(docspecialization in ('cardiology','gynocology','pediatrics'))
+constraint df_docspcl default 'mbbs')
+create table Patient(patid int primary key,Patname nvarchar(20),PatSymptom nvarchar(20))
+create table DocPatTable(docid int references doctor(docid) on delete cascade on update cascade,
+Patid int references patient(patid) on delete cascade on update cascade,Diagnosis nvarchar(20),
+PatJoinDate Date,Patdischarge date)
+--------
+drop table DocPatTable
+drop table patient
+drop table doctor
+------
+create table PatientTable(patid nvarchar(10) primary key,Diagnosis nvarchar(20),
+PatJoinDate Date,Patdischarge date)
+create table doctorTable(docid int primary key,DocName nvarchar(20),
+DocSpecialization nvarchar(20) constraint chkspcl check(docspecialization in ('cardiology','gynocology','pediatrics'))
+constraint df_docspcl default 'mbbs')
+alter table doctortable add patid nvarchar(10) foreign key references patienttable(patid)
+alter trigger t_patinsertion
+on patienttable
+for insert
+as
+begin 
+declare @patid nvarchar(20) = (select patid from inserted)
+declare @Diagnosis nvarchar(20) = (select Diagnosis from inserted)
+insert into Doctortable(patid) values (@patid)
+insert into doctortable(DocSpecialization) values 
+(case @Diagnosis 
+when 'heartattack' then 'cardiology'
+when 'ovariancancer' then 'gynocology'
+when 'vitamindeficiency' then 'pediatrics'
+else 
+'mbbs'
+end)
+insert into doctortable(Docid) values 
+(case @Diagnosis
+when 'heartattack' then 1001
+when 'ovariancancer' then 1002
+when 'vitamindeficiency' then 1003
+else 1004
+end)
+end
+
+insert into patientTable(patid,diagnosis,patjoindate,patdischarge) values('11A2','heartattack','2019-08-05','2019-12-25')
+select * from patienttable
+alter table docpattable drop FK__DocPatTab__Patid__75A278F5
+alter table patient drop PK__Patient__0F77C6A9B9197FDC
+
+alter table patient alter column patid nvarchar(20) not null
+alter table patient add constraint pk_patient primary key(patid)
+alter table docpattable alter column patid nvarchar(20)
+alter table docpattable add constraint fk_patient foreign key(patid) references patient(patid) 
+insert into Patient(patid,patname,PatSymptom) values ('11A2','aarya','ChestPain')
+update patient 
+select * from patient
+select * from DocPatTable

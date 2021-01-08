@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta char="utf-6" />
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel=" stylesheet" />
+    <link href="CssPage.css" rel=" stylesheet" />
+    <style>
+        body {
+            background-image: url(images/logo.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size:auto;
+            
+        }
+        .container-fluid
+        {
+            background-position:left;
+        }
+       
+
+        form{
+            width:50%;
+            margin:100px auto;
+        }
+        input{
+            font-size:medium;
+        }
+    </style>
+    <script type='text/javascript'>
+        function formValidator() {
+            var FirstName = document.getElementById('FirstName');
+            var addr = document.getElementById('addr');
+            var pincode = document.getElementById('pincode');
+            var state = document.getElementById('state');
+            var email = document.getElementById('email');
+            var Phone = document.getElementById('Phone');
+            var Password = document.getElementById('Password');
+            if (isAlphabet(FirstName, "plz enter only letters for name")) {
+                if (AddressValidate(addr, "plz enter correct address")) {
+                    if (isNumeric(pincode, "plz enter only numbers for pincode")) {
+                        if (madeSelection(state, "plz choose a state")) {
+                            if (emailValidator(email, "plz enter valid email")) {
+                                if (Phonevalidator(Phone, "please enter the correct phonenumber")) {
+                                    if (isAlphanumeric(Password, "Please enter alphanumeric password")) {
+
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+        function notEmpty(elem, helperMsg) {
+            if (elem.value.length == 0) {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+            return true;
+        }
+        function isNumeric(elem, helperMsg) {
+            var numericExpression = /^[0-9]+$/;
+            if (elem.value.match(numericExpression)) {
+                return true;
+            } else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+        function isAlphabet(elem, helperMsg) {
+            var alphaExp = /^[a-zA-Z]+$/;
+            if (elem.value.match(alphaExp)) {
+                return true;
+            } else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+        function isAlphanumeric(elem, helperMsg) {
+            var alphaExp = /^[0-9a-zA-Z]+$/;
+            if (elem.value.match(alphaExp)) {
+                return true;
+            } else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+        function AddressValidate(elem, helperMsg) {
+                var alphaExp = /^[0-9a-zA-Z\-\,\ \:\.]+$/;
+                if (elem.value.match(alphaExp)) {
+                    return true;
+                } else {
+                    alert(helperMsg);
+                    elem.focus();
+                    return false;
+                }
+
+        }
+        function Phonevalidator(elem) {
+            var uInput = elem.value;
+            if (uInput.length == 10) {
+                return true;
+            } else {
+                alert("plz enter ten digit phone number");
+                elem.focus();
+                return false;
+            }
+        }
+        function madeSelection(elem, helperMsg) {
+            if (elem.value == "Please Choose") {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function emailValidator(elem, helperMsg) {
+            var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-] + \.[a-zA-Z0-9]{2,4}+$/;
+            if (elem.value.match(emailExp)) {
+                return true;
+            } else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+        
+
+    </script>
+</head>
+<body>
+    
+    <div class=" container-fluid">
+       <h2 style="background-position:left">SignUp Form</h2>
+        <form action="# " onsubmit='return formValidator()'>
+            First Name: <br /> <input type='text' id='FirstName' /> <br /><br />
+            Address:<br /> <input type='text' id='addr' /> <br /><br />
+            PinCode:<br /> <input type='text' id='pincode' /> <br /><br />
+            State:<br />
+            <select id='state'>
+                <option> Please Choose </option>
+                <option> Andhra</option>
+                <option> Telangana</option>
+                <option> Maharashtra</option>
+                <option> Karnataka</option>
+                <option> TamilNadu</option>
+            </select><br /><br />
+            PhoneNumber:<br /> <input type='text' id='Phone' /><br /><br />
+            Email:<br /> <input type='text' id='email' /><br /><br />
+            Password:<br />
+            <input type='text' id='password' /><br /><br />
+
+            <input type='submit' value='Sign Up' />
+
+
+        </form>
+    </div>
+</body>
+</html>

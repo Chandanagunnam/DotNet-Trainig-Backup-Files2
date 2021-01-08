@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbemployee873Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EmployeeTable">
+          <Key>
+            <PropertyRef Name="Eid" />
+          </Key>
+          <Property Name="Eid" Type="int" Nullable="false" />
+          <Property Name="Ename" Type="nvarchar" MaxLength="30" />
+          <Property Name="Salary" Type="int" />
+          <Property Name="gender" Type="varchar" MaxLength="20" />
+          <Property Name="de_id" Type="int" />
+          <Property Name="mgid" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbemployee873.dbo.epersonaldetailtbl' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="epersonaldetailtbl">
+          <Property Name="eid" Type="int" />
+          <Property Name="age" Type="int" />
+          <Property Name="city" Type="nvarchar" MaxLength="30" />
+          <Property Name="phone" Type="nvarchar" MaxLength="25" />
+        </EntityType>-->
+        <EntityType Name="tblDepartment">
+          <Key>
+            <PropertyRef Name="deptid" />
+          </Key>
+          <Property Name="deptid" Type="int" Nullable="false" />
+          <Property Name="Dname" Type="varchar" MaxLength="50" />
+          <Property Name="YearOfEstablishment" Type="date" />
+          <Property Name="Location" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <Association Name="FK__EmployeeT__de_id__5AEE82B9">
+          <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+          <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDepartment">
+              <PropertyRef Name="deptid" />
+            </Principal>
+            <Dependent Role="EmployeeTable">
+              <PropertyRef Name="de_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmployeeTa__mgid__797309D9">
+          <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="0..1" />
+          <End Role="EmployeeTable1" Type="Self.EmployeeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeTable">
+              <PropertyRef Name="Eid" />
+            </Principal>
+            <Dependent Role="EmployeeTable1">
+              <PropertyRef Name="mgid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+error 6004: The table 'dbemployee873.dbo.epersonaldetailtbl' is referenced by a relationship, but cannot be found.
+        <Association Name="fk_eid" />-->
+        <EntityContainer Name="dbemployee873ModelStoreContainer">
+          <EntitySet Name="EmployeeTable" EntityType="Self.EmployeeTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__EmployeeT__de_id__5AEE82B9" Association="Self.FK__EmployeeT__de_id__5AEE82B9">
+            <End Role="tblDepartment" EntitySet="tblDepartment" />
+            <End Role="EmployeeTable" EntitySet="EmployeeTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmployeeTa__mgid__797309D9" Association="Self.FK__EmployeeTa__mgid__797309D9">
+            <End Role="EmployeeTable" EntitySet="EmployeeTable" />
+            <End Role="EmployeeTable1" EntitySet="EmployeeTable" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbemployee873Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EmployeeTable">
+          <Key>
+            <PropertyRef Name="Eid" />
+          </Key>
+          <Property Name="Eid" Type="Int32" Nullable="false" />
+          <Property Name="Ename" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="Int32" />
+          <Property Name="gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="de_id" Type="Int32" />
+          <Property Name="mgid" Type="Int32" />
+          <NavigationProperty Name="tblDepartment" Relationship="Self.FK__EmployeeT__de_id__5AEE82B9" FromRole="EmployeeTable" ToRole="tblDepartment" />
+          <NavigationProperty Name="EmployeeTable1" Relationship="Self.FK__EmployeeTa__mgid__797309D9" FromRole="EmployeeTable" ToRole="EmployeeTable1" />
+          <NavigationProperty Name="EmployeeTable2" Relationship="Self.FK__EmployeeTa__mgid__797309D9" FromRole="EmployeeTable1" ToRole="EmployeeTable" />
+        </EntityType>
+        <EntityType Name="tblDepartment">
+          <Key>
+            <PropertyRef Name="deptid" />
+          </Key>
+          <Property Name="deptid" Type="Int32" Nullable="false" />
+          <Property Name="Dname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="YearOfEstablishment" Type="DateTime" Precision="0" />
+          <Property Name="Location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EmployeeTables" Relationship="Self.FK__EmployeeT__de_id__5AEE82B9" FromRole="tblDepartment" ToRole="EmployeeTable" />
+        </EntityType>
+        <Association Name="FK__EmployeeT__de_id__5AEE82B9">
+          <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+          <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDepartment">
+              <PropertyRef Name="deptid" />
+            </Principal>
+            <Dependent Role="EmployeeTable">
+              <PropertyRef Name="de_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmployeeTa__mgid__797309D9">
+          <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="0..1" />
+          <End Role="EmployeeTable1" Type="Self.EmployeeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeTable">
+              <PropertyRef Name="Eid" />
+            </Principal>
+            <Dependent Role="EmployeeTable1">
+              <PropertyRef Name="mgid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbemployee873Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EmployeeTables" EntityType="Self.EmployeeTable" />
+          <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+          <AssociationSet Name="FK__EmployeeT__de_id__5AEE82B9" Association="Self.FK__EmployeeT__de_id__5AEE82B9">
+            <End Role="tblDepartment" EntitySet="tblDepartments" />
+            <End Role="EmployeeTable" EntitySet="EmployeeTables" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmployeeTa__mgid__797309D9" Association="Self.FK__EmployeeTa__mgid__797309D9">
+            <End Role="EmployeeTable" EntitySet="EmployeeTables" />
+            <End Role="EmployeeTable1" EntitySet="EmployeeTables" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbemployee873ModelStoreContainer" CdmEntityContainer="dbemployee873Entities">
+          <EntitySetMapping Name="EmployeeTables">
+            <EntityTypeMapping TypeName="dbemployee873Model.EmployeeTable">
+              <MappingFragment StoreEntitySet="EmployeeTable">
+                <ScalarProperty Name="Eid" ColumnName="Eid" />
+                <ScalarProperty Name="Ename" ColumnName="Ename" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="de_id" ColumnName="de_id" />
+                <ScalarProperty Name="mgid" ColumnName="mgid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDepartments">
+            <EntityTypeMapping TypeName="dbemployee873Model.tblDepartment">
+              <MappingFragment StoreEntitySet="tblDepartment">
+                <ScalarProperty Name="deptid" ColumnName="deptid" />
+                <ScalarProperty Name="Dname" ColumnName="Dname" />
+                <ScalarProperty Name="YearOfEstablishment" ColumnName="YearOfEstablishment" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

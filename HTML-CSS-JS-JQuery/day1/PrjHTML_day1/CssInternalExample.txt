@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internal CSS  eg,Abbrevation,strong and mark,emphasis eg,Sub and superscript eg</title>
+    <!---Internal css-->
+    <style>
+        /*element selector*/
+        h2{
+            font-family:Amiri;
+            font-size:30px;
+            color:pink;         
+        }
+
+/*class selector*/
+.para1{
+font-size:20px;
+color:darkgoldenrod;
+}
+.para2{
+font-size:25px;
+color:green;
+}
+
+    </style>
+
+</head>
+<body>
+    <h1>TRIANGLES</h1>
+    <h2>Types Of Triangles</h2>
+    <p class ="para1" >
+        Triangles are classified according to the length of their sides
+        or the measure of their angles. These classifications come in threes,
+        just like the sides and angles themselves.
+    </p>
+    <h2>Classification</h2>
+    <ol class="para1">
+        <li>Equilarteral triangle has 3 equal sides</li>
+        <li>Isosceles triangle has 2 equal sides</li>
+        <li>Scalene triangle has no equal sides</li>
+    </ol>
+    <h2>VibGyorExample</h2>
+    <p class ="para2">
+        <abbr title ="Violet–Indigo–Blue–Green–Yellow–Orange–Red">VIBGYOR</abbr> is a popular mnemonic device used for memorizing the traditional optical spectrum. Vibgyor may refer to:<strong><mark> Roygbiv </mark>, the exact reverse of Vibgyor;</strong>.--------------------
+
+The<strong> sequence of hues </strong>commonly described as making up a rainbow.
+    </p>
+    <h2>Facts Of Triangles</h2>
+    <p class = "para1">
+        The sum of the measures of the <em>interior angles of a triangle in Euclidean space is always 180 degrees</em>.
+        This fact is equivalent to Euclid's parallel postulate. This allows determination of the measure of the third angle of any triangle, given the measure of two angles. An exterior angle of a triangle is an angle that is a linear pair (and hence supplementary) to an interior angle.
+    </p>
+<p style ="font-size:xx-large"> SubscriptExample : log <sub>number</sub></p>
+<p style ="font-size:medium"> SuperscriptExample : 14<sup>th</sup> October 2020</p style ="font-size:medium">
+
+</body>
+</html>

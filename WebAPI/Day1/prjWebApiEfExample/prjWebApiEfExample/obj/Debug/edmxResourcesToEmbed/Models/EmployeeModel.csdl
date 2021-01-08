@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbemployee873Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EmployeeTable">
+    <Key>
+      <PropertyRef Name="Eid" />
+    </Key>
+    <Property Name="Eid" Type="Int32" Nullable="false" />
+    <Property Name="Ename" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Salary" Type="Int32" />
+    <Property Name="gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="de_id" Type="Int32" />
+    <Property Name="mgid" Type="Int32" />
+    <NavigationProperty Name="tblDepartment" Relationship="Self.FK__EmployeeT__de_id__5AEE82B9" FromRole="EmployeeTable" ToRole="tblDepartment" />
+    <NavigationProperty Name="EmployeeTable1" Relationship="Self.FK__EmployeeTa__mgid__797309D9" FromRole="EmployeeTable" ToRole="EmployeeTable1" />
+    <NavigationProperty Name="EmployeeTable2" Relationship="Self.FK__EmployeeTa__mgid__797309D9" FromRole="EmployeeTable1" ToRole="EmployeeTable" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="deptid" />
+    </Key>
+    <Property Name="deptid" Type="Int32" Nullable="false" />
+    <Property Name="Dname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YearOfEstablishment" Type="DateTime" Precision="0" />
+    <Property Name="Location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EmployeeTables" Relationship="Self.FK__EmployeeT__de_id__5AEE82B9" FromRole="tblDepartment" ToRole="EmployeeTable" />
+  </EntityType>
+  <Association Name="FK__EmployeeT__de_id__5AEE82B9">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="deptid" />
+      </Principal>
+      <Dependent Role="EmployeeTable">
+        <PropertyRef Name="de_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmployeeTa__mgid__797309D9">
+    <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="0..1" />
+    <End Role="EmployeeTable1" Type="Self.EmployeeTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeTable">
+        <PropertyRef Name="Eid" />
+      </Principal>
+      <Dependent Role="EmployeeTable1">
+        <PropertyRef Name="mgid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbemployee873Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EmployeeTables" EntityType="Self.EmployeeTable" />
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <AssociationSet Name="FK__EmployeeT__de_id__5AEE82B9" Association="Self.FK__EmployeeT__de_id__5AEE82B9">
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+      <End Role="EmployeeTable" EntitySet="EmployeeTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmployeeTa__mgid__797309D9" Association="Self.FK__EmployeeTa__mgid__797309D9">
+      <End Role="EmployeeTable" EntitySet="EmployeeTables" />
+      <End Role="EmployeeTable1" EntitySet="EmployeeTables" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

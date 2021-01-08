@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel=" stylesheet" />
+
+    <link href="CssPage.css" rel=" stylesheet" />
+
+</head>
+<body>
+    <div>
+        <div class=" container-fluid">
+            <center> <h2> Sarees </h2></center>
+        </div>
+        <div class=" container-fluid">
+
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li><a href="Sarees.html">Sarees</a></li>
+                    <li><a href="Lehangas.html">Lehangas</a></li>
+                    <li><a href="Trousers.html">Trousers</a></li>
+                    <li><a href="TopsAndDresses.html">Tops&Dresses</a></li>
+                </ul>
+            </nav>
+        </div>
+            <div class="container-fluid">
+                <div class=" row">
+                    <div class=" column">
+                        <img src="images/saree1.jpg" alt="saree" style="width: 100%" />&nbsp;&nbsp;&nbsp;
+                        <center><p>Price : RS 2100 /-</p></center>
+                        <center><button> Buy </button></center>
+                    </div>
+                    <div class=" column">
+                        <img src="images/saree2.jpeg" alt="saree" style="width: 100%" />&nbsp;&nbsp;&nbsp;
+                        <center><p>Price : RS 3100 /-</p></center>
+                        <center><button> Buy </button></center>
+                    </div>
+                    <div class=" column">
+                        <img src="images/saree3.jpg" alt="saree" style="width: 100%" />&nbsp;&nbsp;&nbsp;
+                        <center><p>Price : RS 2800 /-</p></center>
+                        <center><button> Buy </button></center>
+                    </div>
+                    <br /> &nbsp;
+                    <div class=" column">
+                        <img src="images/saree4.jpg" alt="saree" style="width: 100%" />&nbsp;&nbsp;&nbsp;
+                        <center><p>Price : RS 3200 /-</p></center>
+                        <center><button> Buy </button></center>
+                    </div>
+                    <div class=" column">
+                        <img src="images/saree5.jpg" alt="saree" style="width: 100%" />&nbsp;&nbsp;&nbsp;
+                        <center><p>Price : RS 3800 /-</p></center>
+                        <center><button> Buy </button></center>
+                    </div>
+                    <div class=" column">
+                        <img src="images/saree6.jpg" alt="saree" style="width: 100%" />&nbsp;&nbsp;&nbsp;
+                        <center><p>Price : RS 3100 /-</p></center>
+                        <center><button> Buy </button></center>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+</html>

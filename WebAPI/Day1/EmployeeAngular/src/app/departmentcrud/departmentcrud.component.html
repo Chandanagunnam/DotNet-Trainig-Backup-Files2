@@ -1,0 +1,34 @@
+<p>departmentcrud works!</p>
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+</tr>
+<tr *ngFor="let d of departments;let i=index">
+    <td>{{d.deptid}}</td>
+    <td>{{d.dname}}</td>
+    <td>{{d.location}}</td>
+    <td><button (click)="removeDept(d.deptid)">Delete</button></td>
+    <td><button (click)="getparticulardept(d.deptid)">Edit</button></td>
+</tr>
+</table>
+
+<hr/>
+<form #deptform="ngForm">
+    <p>
+      Department Id :
+        <input type="number" name="deptid" [(ngModel)]="dept.deptid" #deptid=ngModel/>
+    </p>
+    <p>
+        Department Name :
+          <input type="text" name="dname" [(ngModel)]="dept.dname" #dname=ngModel/>
+      </p>
+      <p>
+       Location :
+          <input type="text" name="location" [(ngModel)]="dept.location" #location=ngModel/>
+      </p>
+      <p><button (click)="addDept()">Add Department</button></p>
+
+      <p><button (click)="updateparticularDept(dept)">Update Department</button></p>
+</form>

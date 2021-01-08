@@ -1,0 +1,3 @@
+Hello World
+
+This is an example of editing git file and commiting the changes and pulling the code to make changes in the local file(GitFirstExample-hello.txt)( as well

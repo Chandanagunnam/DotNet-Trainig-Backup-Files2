@@ -1,0 +1,20 @@
+<p>employeecrud works!</p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>AGE</th>
+        <th>CITY</th>
+        <th>MOBILE NO</th>
+        <th>SALARY</th>
+    </tr>
+
+    <tr *ngFor="let emp of empdetails;let i=index">
+      <td>{{emp.emp_id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.age}}</td>
+      <td>{{emp.city}}</td>
+      <td>{{emp.mobile}}</td>
+      <td>{{emp.salary}}</td>
+    </tr>
+</table>

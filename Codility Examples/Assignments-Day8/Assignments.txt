@@ -1,0 +1,54 @@
+1 Two Sum
+Given an array of integers, find two numbers such that they add up to a specific target
+number.
+The function twoSum should return indices of the two numbers such that they add
+up to the target, where index1 must be less than index2. Please note that your returned
+answers (both index1 and index2) are not zero-based.
+For example:
+Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=0, index2=1
+
+
+2.LeetCode – Find First and Last Position of Element in Sorted Array 
+ 
+Given a sorted array of integers, find the starting and ending position of a given target value. Your algorithm's runtime complexity must be in the order of O(log n). If the target is not found in the array, return [-1, -1]. For example, given [5, 7, 7, 8, 8, 10] and target value 8, return [3, 4].
+target value is 10, return [5,-1]
+Analysis
+
+Based on the requirement of O(log n), this is a binary search problem apparently.
+
+3. Two Sum III – Data structure design 
+ 
+Design and implement a TwoSum class. It should support the following operations: add and find.
+
+add - Add the number to an internal data structure.
+find - Find if there exists any pair of numbers which sum is equal to the value.
+For example,
+
+add(1); 
+add(3); 
+add(5);
+find(4) -> true
+find(7) -> false
+
+4. Minimum Size Subarray Sum
+Given an array of n positive integers and a positive integer s, find the minimal length
+of a subarray of which the sum = s. If there isn’t one, return 0 instead.
+For example, given the array [2,3,1,2,4,3] and s = 7, the subarray [4,3] has the minimal
+length of 2 under the problem constraint.
+
+5.LeetCode – Move Zeroes 
+ 
+Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
+
+6. LeetCode – Remove Invalid Parentheses 
+ 
+Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+
+Note: The input string may contain letters other than the parentheses ( and ).
+Examples:
+"()())()" -> ["()()()", "(())()"]
+"(a)())()" -> ["(a)()()", "(a())()"]
+")(" -> [""]

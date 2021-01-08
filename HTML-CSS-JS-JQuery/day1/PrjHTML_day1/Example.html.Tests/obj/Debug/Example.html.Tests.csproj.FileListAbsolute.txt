@@ -1,0 +1,17 @@
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Example.html.Tests.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Example.html.Tests.pdb
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Example.html.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Example.html.pdb
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Example.html.dll.config
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\obj\Debug\Example.html.Tests.csprojAssemblyReference.cache
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\obj\Debug\Example.html.Tests.csproj.CoreCompileInputs.cache
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\obj\Debug\Example.html.Tests.csproj.CopyComplete
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\obj\Debug\Example.html.Tests.dll
+C:\Users\rajes\Desktop\chandana-GET-LTI\html\day1\PrjHTML_day1\Example.html.Tests\obj\Debug\Example.html.Tests.pdb
